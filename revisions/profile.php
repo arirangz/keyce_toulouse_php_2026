@@ -6,8 +6,8 @@ if (!isset($_SESSION["email"])) {
 ?>
 
 <h1>Mon profil</h1>
-<p>Pseudo: <?= $_SESSION["nickname"]; ?> </p>
-<p>Email: <?= $_SESSION["email"]; ?></p>
+<p>Pseudo: <?= htmlentities($_SESSION["nickname"]); ?> </p>
+<p>Email: <?= htmlentities($_SESSION["email"]); ?></p>
 
 <?php require_once "templates/footer.php"; ?>
 

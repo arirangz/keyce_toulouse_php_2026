@@ -1,13 +1,17 @@
 <?php
 class Voiture 
 {
-    // Des propriétés
-    public string $marque;
-    public float $vitesseMax;
+
+    public function __construct(
+        public string $marque,
+        public float $vitesseMax
+    )
+    {
+    }
 
     // Ceci est une méthode
     public function klaxonner():void
     {
-        echo "bip bip!";
+        echo "La voiture ".$this->marque." fait bip bip!";
     }
 }

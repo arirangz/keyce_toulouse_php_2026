@@ -19,9 +19,9 @@ class Voiture
         }
     }
     //Récupérer/lire
-    public function getVitesseMax():float
+    public function getVitesseMax():string
     {
-        return $this->vitesseMax;
+        return $this->vitesseMax."km/h";
     }
 
     public function getMarque():string

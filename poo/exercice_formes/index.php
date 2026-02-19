@@ -1,7 +1,8 @@
 <?php
 require_once "Rectangle.php";
 
-$chambre = new Rectangle(4,3,"rouge");
+$chambre = new Rectangle(-4,3,"rouge");
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,6 +14,6 @@ $chambre = new Rectangle(4,3,"rouge");
 <body>
     <h1>Exercice formes</h1>
     <h2>Surface de la chambre: <?= $chambre->calculerSurface() ?>m²</h2>
-    <h3>Couleur des murs: <?= $chambre->couleur ?></h3>
+    <h3>Couleur des murs: <?= $chambre->getCouleur() ?></h3>
 </body>
 </html>

@@ -25,4 +25,5 @@ class Horse extends Animal
     }
 }
 
-$animal = new Animal();
+// on n'a pas le droit de faire une instance d'une classe abstraite
+//$animal = new Animal();

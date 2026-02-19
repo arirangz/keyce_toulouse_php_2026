@@ -1,6 +1,6 @@
 <?php
 
-function loginUser(PDO $pdo, string $email, string $password):bool
+function loginUser(PDO $pdo, string $email, string $password):bool 
 {
     // On essaye de récupérer un utilisateur à partir de l'email
     $query = $pdo->prepare("SELECT * FROM user WHERE email = :email");

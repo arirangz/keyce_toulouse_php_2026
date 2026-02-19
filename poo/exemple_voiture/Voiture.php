@@ -1,43 +1,23 @@
 <?php
-class Voiture 
+require_once "Vehicule.php";
+class Voiture extends Vehicule
 {
 
     public function __construct(
         protected string $marque,
-        protected float $vitesseMax
+        protected float $vitesseMax,
+        protected float $nombreDeRoues,
     )
     {
     }
 
-    //Modifier/écrire
-    public function setVitesseMax(float $vitesse):void
+    public function getNombreDeRoues():float
     {
-        if ($vitesse >= 0) {
-            $this->vitesseMax = $vitesse;
-        } else {
-            $this->vitesseMax = 0;
-        }
+        return $this->nombreDeRoues;
     }
-    //Récupérer/lire
-    public function getVitesseMax():string
+    public function setNombreDeRoues(string $nombreDeRoues):void
     {
-        return $this->vitesseMax."km/h";
+        $this->nombreDeRoues = $nombreDeRoues;
     }
 
-    public function getMarque():string
-    {
-        return $this->marque;
-    }
-    public function setMarque(string $marque):void
-    {
-        $this->marque = $marque;
-    }
-
-
-
-    // Ceci est une méthode
-    public function klaxonner():void
-    {
-        echo "La voiture ".$this->marque." fait bip bip!";
-    }
 }

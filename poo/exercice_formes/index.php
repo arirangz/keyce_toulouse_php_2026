@@ -1,7 +1,10 @@
 <?php
 require_once "Rectangle.php";
+require_once "Cercle.php";
 
-$chambre = new Rectangle(-4,3,"rouge");
+$chambre = new Rectangle("rouge",4,3);
+
+$disque = new Cercle("bleu", 5);
 
 ?>
 <!DOCTYPE html>
@@ -14,6 +17,8 @@ $chambre = new Rectangle(-4,3,"rouge");
 <body>
     <h1>Exercice formes</h1>
     <h2>Surface de la chambre: <?= $chambre->calculerSurface() ?>m²</h2>
-    <h3>Couleur des murs: <?= $chambre->getCouleur() ?></h3>
+    <p>Couleur des murs: <?= $chambre->getCouleur() ?></p>
+
+    <h2>Surface du cercle: <?=$disque->calculerSurface() ?></h2>
 </body>
 </html>

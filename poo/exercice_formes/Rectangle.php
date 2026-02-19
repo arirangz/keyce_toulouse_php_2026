@@ -1,12 +1,13 @@
 <?php
-
-class Rectangle
+require_once "Forme.php";
+class Rectangle extends Forme
 {
     public function __construct(
+        protected string $couleur,
         protected float $longeur,
-        protected float $largeur,
-        protected string $couleur
+        protected float $largeur
     ) {
+        $this->setCouleur($couleur);
         $this->setLargeur($largeur);
         $this->setLongeur($longeur);
     }
@@ -34,14 +35,6 @@ class Rectangle
         } else {
             $this->largeur = 0;
         }
-    }
-    public function getCouleur(): string
-    {
-        return $this->couleur;
-    }
-    public function setCouleur(string $couleur): void
-    {
-        $this->couleur = $couleur;
     }
 
 

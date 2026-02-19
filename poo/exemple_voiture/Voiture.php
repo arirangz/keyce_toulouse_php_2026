@@ -3,8 +3,8 @@ class Voiture
 {
 
     public function __construct(
-        private string $marque,
-        private float $vitesseMax
+        protected string $marque,
+        protected float $vitesseMax
     )
     {
     }
